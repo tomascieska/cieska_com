@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import Geometry from './Geometry.jsx'
+import Geometry from './Geometry.js'
 
 
 
