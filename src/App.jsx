@@ -1,8 +1,6 @@
+/* eslint-disable react/no-unknown-property */
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-// import { WireframeMaterial } from '@react-three/drei/materials/WireframeMaterial'
-
-// import { useEffect, useRef } from 'react'
 import Geometry from './Geometry.jsx'
 
 
