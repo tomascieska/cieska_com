@@ -2,11 +2,11 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Text3D } from '@react-three/drei'
-import { Perf } from 'r3f-perf'
-import AnimatedStars from './AnimatedStars'
 
 
-const Geometry = () => {
+
+
+const Logo = () => {
 
     const ref = useRef()
     useFrame((state, delta) => {
@@ -17,22 +17,13 @@ const Geometry = () => {
     
   return (
     <>
+    <Text3D position={[-3,3,5]} ref={ref} font="./fonts/helvetiker_regular.typeface.json">
+      Cieska.com
+    <meshNormalMaterial wireframe/>
+    </Text3D>
 
-      <AnimatedStars/>
-    
-  <mesh ref={ref} scale={3}>
 
-  <Text3D  font="./fonts/helvetiker_regular.typeface.json">
-    Cieska.com
-  <meshNormalMaterial wireframe/>
-  </Text3D>
-
-    <boxGeometry args={[50, 50, 10, 10, 60, 50]} />
-    <meshToonMaterial wireframe/>
-    
-  </mesh>
-  <Perf/>
     </>
   )}
 
-  export default Geometry
+  export default Logo
