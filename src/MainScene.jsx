@@ -6,7 +6,7 @@ import { Perf } from 'r3f-perf'
 
 
 import AnimatedStars from './AnimatedStars'
-import Earth from './Earth'
+import Earth from './scenes/earth/Earth'
 import Logo from './Logo'
 
 
@@ -19,21 +19,23 @@ const MainScene = () => {
 
   return (
     <>
-        {/* <directionalLight 
+        <directionalLight
+            castShadow
             ref={directionalLightRef}
             position={[0,0,10]}
             intensity={3} 
         />
         <directionalLight 
+            castShadow
             ref={directionalLightRefTwo}
             position={[0,0,-10]}
             intensity={3}
-        /> */}
-        <ambientLight intensity={3}/>
+        />
+        {/* <ambientLight intensity={3}/> */}
 
         <AnimatedStars/>
-        <Earth />
-        <Logo args={[2, 20, 2]}/>
+        <Earth displacementScale={0.1}/>
+        {/* <Logo args={[2, 20, 2]}/> */}
         <Perf/>
     </>
   )
